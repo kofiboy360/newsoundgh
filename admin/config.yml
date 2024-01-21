@@ -1,0 +1,1482 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+  branch: master
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_0
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Twitter Image
+            name: twitter:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: gallery
+    label: Galleries
+    folder: cms/gallery
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_studio-images
+        label: Images
+        widget: list
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: gallery
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[gallery].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: newsound_original_music
+    label: Newsound Original Music
+    folder: cms/newsound-original-music
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: >-
+          The ID (Letters) AFTER the "track/" and BEFORE the
+          "?utm_source=generator" in the embed code on spotify. Eg.
+          043ZucchxTm0ciUXog6HMX 
+        name: title
+        label: Spotify Track Code (ID)
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: newsound-original-music
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[newsound-original-music].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: featured_songs
+    label: Featured Songs
+    folder: cms/featured-songs
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Song Title
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_artist-name
+        label: Artist Name
+        widget: string
+        required: true
+      - hint: ''
+        name: f_cover-image
+        label: Cover Image
+        widget: object
+        required: true
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: true
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_music-link
+        label: Music Link
+        widget: string
+        required: true
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: featured-songs
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[featured-songs].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: artistes
+    label: Artistes
+    folder: cms/artistes
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_picture
+        label: Picture
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_email
+        label: Email
+        widget: string
+        required: false
+      - hint: ''
+        name: f_soundcloud-profile-link
+        label: Soundcloud Profile link
+        widget: string
+        required: false
+      - hint: ''
+        name: f_youtube-link
+        label: Spotify Profile
+        widget: string
+        required: false
+      - hint: ''
+        name: f_audiomack-profile-link
+        label: Audiomack Profile link
+        widget: string
+        required: false
+      - hint: ''
+        name: f_artiste-genre
+        label: Artiste Genre
+        widget: string
+        required: false
+      - hint: ''
+        name: f_bio-2
+        label: Bio
+        widget: text
+        required: false
+      - hint: ''
+        name: f_instagram-link
+        label: Instagram Link
+        widget: string
+        required: false
+      - hint: ''
+        name: f_code-for-sound-cloud
+        label: Spotify Track Code ID
+        widget: string
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: artistes
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[artistes].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: post
+    label: Blog Posts
+    folder: cms/post
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Post Body
+        name: body
+        widget: markdown
+        required: false
+      - hint: Dont enter any text here...Mistake
+        name: f_post-summary
+        label: Post Summary
+        widget: string
+        required: false
+      - hint: ''
+        name: f_main-image
+        label: Main Image
+        widget: object
+        required: true
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: true
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_featured
+        label: Featured?
+        widget: boolean
+        required: false
+        default: false
+      - hint: ''
+        name: f_category
+        label: Category
+        widget: relation
+        required: true
+        collection: category
+        value_field: cms/category/{{slug}}.md
+        search_fields:
+          - slug
+          - name
+        display_fields:
+          - title
+        multiple: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: post
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[post].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: category
+    label: Categories
+    folder: cms/category
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_description
+        label: Description
+        widget: text
+        required: false
+      - hint: ''
+        name: f_category-image
+        label: Category Image
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: category
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[category].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: NEW, key: 12d80'
+            label: Text
+            name: 12d80
+            widget: string
+          - hint: 'Original text: SOUND, key: 4b6d0ef'
+            label: Text
+            name: 4b6d0ef
+            widget: string
+          - hint: 'Original text: Home, key: 2268ff'
+            label: Text
+            name: 2268ff
+            widget: string
+          - hint: 'Original text: About, key: 3c2336d'
+            label: Text
+            name: 3c2336d
+            widget: string
+          - hint: 'Original text: Artistes, key: -455d65ab'
+            label: Text
+            name: '-455d65ab'
+            widget: string
+          - hint: 'Original text: What''s New, key: -21a74f90'
+            label: Text
+            name: '-21a74f90'
+            widget: string
+          - hint: 'Original text: NewSound Originals, key: 11df4d31'
+            label: Text
+            name: 11df4d31
+            widget: string
+          - hint: 'Original text: Contact Us, key: 7f2746de'
+            label: Text
+            name: 7f2746de
+            widget: string
+          - hint: 'Original text: Listen To Music, key: 71929659'
+            label: Text
+            name: '71929659'
+            widget: string
+          - hint: 'Original text: World Class , key: 2b4d4a36'
+            label: Text
+            name: 2b4d4a36
+            widget: string
+          - hint: 'Original text: Entertainment, key: 4d6caf68'
+            label: Text
+            name: 4d6caf68
+            widget: string
+          - hint: >-
+              Original text: Step into the rhythmic world of Ghanaian music with
+              , key: -1d1202b8
+            label: Text
+            name: '-1d1202b8'
+            widget: string
+          - hint: 'Original text: NEWSOUND, key: -7e29ec91'
+            label: Text
+            name: '-7e29ec91'
+            widget: string
+          - hint: 'Original text: Featured Songs, key: -3487d874'
+            label: Text
+            name: '-3487d874'
+            widget: string
+          - hint: 'Original text: What We are About, key: -4fd16c55'
+            label: Text
+            name: '-4fd16c55'
+            widget: string
+          - hint: 'Original text: About Our , key: -377178b9'
+            label: Text
+            name: '-377178b9'
+            widget: string
+          - hint: 'Original text: Studio, key: -6bc46a0a'
+            label: Text
+            name: '-6bc46a0a'
+            widget: string
+          - hint: >-
+              Original text: Drawing inspiration from the rhythmic pulse of
+              Accra's diverse musical traditions, NEWSOUND is a haven for
+              musicians, artists, and creative minds alike. Our mission is to
+              provide a nurturing environment where innovation and passion
+              collide, giving birth to sonic masterpieces that transcend
+              boundaries., key: 5297e80c
+            label: Text
+            name: 5297e80c
+            widget: text
+          - hint: >-
+              Original text: Immerse yourself in the energy of NEWSOUND and
+              experience the magic of Lapaz, Accra. , key: -2d2a63ed
+            label: Text
+            name: '-2d2a63ed'
+            widget: string
+          - hint: 'Original text: See More, key: 3b180342'
+            label: Text
+            name: 3b180342
+            widget: string
+          - hint: 'Original text: Featured , key: 5e61c192'
+            label: Text
+            name: 5e61c192
+            widget: string
+          - hint: 'Original text: Songs, key: 4c5bdde'
+            label: Text
+            name: 4c5bdde
+            widget: string
+          - hint: >-
+              Original text: Below are some of our featured songs for the month,
+              key: -270eb9ce
+            label: Text
+            name: '-270eb9ce'
+            widget: string
+          - hint: >-
+              Original text: No songs have been featured yet. Once there are
+              fetured songs they will show up here..., key: -6470142d
+            label: Text
+            name: '-6470142d'
+            widget: string
+          - hint: >-
+              Original text: Collaborate with us. we love music of all , key:
+              -232028db
+            label: Text
+            name: '-232028db'
+            widget: string
+          - hint: 'Original text: genres, key: -4a79d8b0'
+            label: Text
+            name: '-4a79d8b0'
+            widget: string
+          - hint: 'Original text: Check out, key: -70e383ea'
+            label: Text
+            name: '-70e383ea'
+            widget: string
+          - hint: 'Original text: our Artistes, key: 6e7140a9'
+            label: Text
+            name: 6e7140a9
+            widget: string
+          - hint: 'Original text: View All Aritstes, key: -1b78a8bb'
+            label: Text
+            name: '-1b78a8bb'
+            widget: string
+          - hint: 'Original text: Features, key: -d78b7a3'
+            label: Text
+            name: '-d78b7a3'
+            widget: string
+          - hint: 'Original text: Our , key: 25ae74'
+            label: Text
+            name: 25ae74
+            widget: string
+          - hint: 'Original text: Latest, key: -78c28459'
+            label: Text
+            name: '-78c28459'
+            widget: string
+          - hint: 'Original text:  Music, key: 3b0f11e5'
+            label: Text
+            name: 3b0f11e5
+            widget: string
+          - hint: >-
+              Original text: Follow us on youtube to get firsthand updates on
+              our newest and latest music releases and specials from our
+              artistes!, key: -e76bb2a
+            label: Text
+            name: '-e76bb2a'
+            widget: text
+          - hint: 'Original text: Follow On Youtube, key: -19df326f'
+            label: Text
+            name: '-19df326f'
+            widget: string
+          - hint: 'Original text: Services, key: 560f747e'
+            label: Text
+            name: 560f747e
+            widget: string
+          - hint: >-
+              Original text: Our wide range of services covers everything a
+              modern musician might need, from audio recording solutions to
+              mixing and mastering services, provided at affordable prices.,
+              key: cc06c35
+            label: Text
+            name: cc06c35
+            widget: text
+          - hint: 'Original text: Recording Studio, key: -d8c9cdb'
+            label: Text
+            name: '-d8c9cdb'
+            widget: string
+          - hint: >-
+              Original text: We Provide recording and rehearsal space to
+              musicians throughout the country., key: 25cb9e21
+            label: Text
+            name: 25cb9e21
+            widget: string
+          - hint: 'Original text: Mixing And Mastering, key: -5b8b8f83'
+            label: Text
+            name: '-5b8b8f83'
+            widget: string
+          - hint: >-
+              Original text: Providing top audio mixing & mastering services for
+              local and international artists and production companies., key:
+              -63d5474f
+            label: Text
+            name: '-63d5474f'
+            widget: text
+          - hint: 'Original text: Photo Studio, key: 3aec17c4'
+            label: Text
+            name: 3aec17c4
+            widget: string
+          - hint: >-
+              Original text: We have a top notch photo studio to meet all your
+              requirements, for every kind of setting you may need, key:
+              -36270a0b
+            label: Text
+            name: '-36270a0b'
+            widget: text
+          - hint: 'Original text: Podcast Studio, key: 3919ab2'
+            label: Text
+            name: 3919ab2
+            widget: string
+          - hint: >-
+              Original text: We also have a podcast studio to for all podcast
+              lovers out there who need a space to function., key: -515f0e30
+            label: Text
+            name: '-515f0e30'
+            widget: text
+          - hint: 'Original text: What''s new, key: -21a6d770'
+            label: Text
+            name: '-21a6d770'
+            widget: string
+          - hint: 'Original text: Latest Blog , key: -3f6a351b'
+            label: Text
+            name: '-3f6a351b'
+            widget: string
+          - hint: 'Original text: Posts, key: 49b8bb3'
+            label: Text
+            name: 49b8bb3
+            widget: string
+          - hint: 'Original text: Read Article..., key: 630f1282'
+            label: Text
+            name: 630f1282
+            widget: string
+          - hint: >-
+              Original text: No Blogs have been posted yet. Once they are posted
+              they will show up here..., key: 198b646d
+            label: Text
+            name: 198b646d
+            widget: string
+          - hint: 'Original text: Latest , key: 6071f959'
+            label: Text
+            name: 6071f959
+            widget: string
+          - hint: 'Original text: articles, key: -493f2dc3'
+            label: Text
+            name: '-493f2dc3'
+            widget: string
+          - hint: 'Original text: View All..., key: 11753708'
+            label: Text
+            name: '11753708'
+            widget: string
+          - hint: 'Original text: Jan 20, 2022, key: -59cc7bc7'
+            label: Text
+            name: '-59cc7bc7'
+            widget: string
+          - hint: 'Original text: © , key: 1497'
+            label: Text
+            name: '1497'
+            widget: string
+          - hint: 'Original text: 2023, key: 1774ff'
+            label: Text
+            name: 1774ff
+            widget: string
+          - hint: 'Original text: NewSound GH, key: 162fff32'
+            label: Text
+            name: 162fff32
+            widget: string
+          - hint: |-
+              Original text: ., All Rights reserved
+                        , key: 35160c5a
+            label: Text
+            name: 35160c5a
+            widget: string
+          - hint: "Original text: Developed by \_, key: -46b15ee5"
+            label: Text
+            name: '-46b15ee5'
+            widget: string
+          - hint: 'Original text: YMLK Technologies, key: -28ae11c9'
+            label: Text
+            name: '-28ae11c9'
+            widget: string
+          - hint: 'Original text: Newsound Originals , key: 5c4614ef'
+            label: Text
+            name: 5c4614ef
+            widget: string
+          - hint: 'Original text: Contact, key: -64104400'
+            label: Text
+            name: '-64104400'
+            widget: string
+          - hint: 'Original text: About , key: 74843a53'
+            label: Text
+            name: 74843a53
+            widget: string
+          - hint: 'Original text: Us, key: abe'
+            label: Text
+            name: abe
+            widget: string
+          - hint: >-
+              Original text: NEWSOUND is a haven for musicians, artists, and
+              creative minds alike. Our mission is to provide a nurturing
+              environment where innovation and passion collide, giving birth to
+              sonic masterpieces that transcend boundaries. Immerse yourself in
+              the energy of NEWSOUND and experience the magic of Lapaz, Accra. ,
+              key: -5b8a3673
+            label: Text
+            name: '-5b8a3673'
+            widget: text
+          - hint: >-
+              Original text: Contact us to schedule a visit, book a session, or
+              learn more about our services. Let's embark on a journey of sonic
+              excellence together, key: 1fe7a30d
+            label: Text
+            name: 1fe7a30d
+            widget: text
+          - hint: 'Original text: Book A Session, key: 3bd84140'
+            label: Text
+            name: 3bd84140
+            widget: string
+          - hint: 'Original text: About Us, key: 645efc51'
+            label: Text
+            name: 645efc51
+            widget: string
+          - hint: 'Original text: A Creative Sanctuary. , key: -37926e1c'
+            label: Text
+            name: '-37926e1c'
+            widget: string
+          - hint: >-
+              Original text: Our studio provides a tranquil, uncluttered
+              environment where artists can find inspiration and bring musical
+              ideas to life. With a clean, minimalist design, the space has been
+              specially crafted to free the mind from distraction and allow
+              creativity to flourish. , key: 420d1bb9
+            label: Text
+            name: 420d1bb9
+            widget: text
+          - hint: >-
+              Original text: By paring down visual clutter, we shift the focus
+              to the blank canvases in front of our artists - their next
+              melodies, lyrics, and recordings. The peaceful setting invites
+              experimentation, improvisation, and innovation rather than
+              imposing preconceptions. , key: 5d38d82d
+            label: Text
+            name: 5d38d82d
+            widget: text
+          - hint: >-
+              Original text: Whether collaborating with our in-house producers
+              or working solo, artists have room to wander sonic landscapes
+              limited only by their imagination. Our studios remove barriers
+              between artists and the breakthroughs they seek. The bells and
+              whistles take a backseat; pure inspiration takes the wheel. , key:
+              -26f9e802
+            label: Text
+            name: '-26f9e802'
+            widget: text
+          - hint: >-
+              Original text: Escape into this oasis we've designed for fresh
+              musical magic when you visit us. Let an atmosphere optimized for
+              original artistry lead you to your next masterpiece., key:
+              -637348b0
+            label: Text
+            name: '-637348b0'
+            widget: text
+          - hint: 'Original text: Images Of Our Studio Space..., key: -2c890363'
+            label: Text
+            name: '-2c890363'
+            widget: string
+          - hint: 'Original text: Recording, key: -4d55622f'
+            label: Text
+            name: '-4d55622f'
+            widget: string
+          - hint: 'Original text:  Studio, key: 3102fe16'
+            label: Text
+            name: 3102fe16
+            widget: string
+          - hint: >-
+              Original text: Welcome to our recording studio, where we are
+              dedicated to delivering exceptional music quality. , key: 3e2656b0
+            label: Text
+            name: 3e2656b0
+            widget: text
+          - hint: >-
+              Original text: Our studio is designed to provide a minimal space
+              that is fully equipped to help you bring your ideas to life.
+              Whether you're a seasoned musician or just starting out, our
+              studio offers the perfect environment to translate your creative
+              vision into reality., key: 162dc
+            label: Text
+            name: 162dc
+            widget: text
+          - hint: >-
+              Original text: Our studio is more than just a space; it's a
+              creative sanctuary where artists can express themselves without
+              any distractions. , key: 5b5a3a2b
+            label: Text
+            name: 5b5a3a2b
+            widget: text
+          - hint: >-
+              Original text: We believe that the best music comes from a place
+              of pure creativity, and our studio is designed to foster that
+              environment., key: 1e8d4b11
+            label: Text
+            name: 1e8d4b11
+            widget: text
+          - hint: 'Original text: Mixing, key: -769b0fda'
+            label: Text
+            name: '-769b0fda'
+            widget: string
+          - hint: 'Original text:  And Mastering, key: 4fe1bad7'
+            label: Text
+            name: 4fe1bad7
+            widget: string
+          - hint: >-
+              Original text: With the right mix, a song can come to life. To
+              help you achieve this, we collaborate with a wide range of
+              producers and sound engineers, varying in price and skills, to
+              build up your song. Our goal is to unlock your music's true
+              potential and create a seamless listening experience across your
+              song entire album, EP, or mixtape., key: -5fcf52a5
+            label: Text
+            name: '-5fcf52a5'
+            widget: text
+          - hint: 'Original text: Photo, key: 4984e12'
+            label: Text
+            name: '4984e12'
+            widget: string
+          - hint: >-
+              Original text: Similar to our recording studio, we have introduced
+              a photo studio and an annex to the recording studio, focused on
+              bringing videos and other creative ideas to life. , key: 16925e2b
+            label: Text
+            name: 16925e2b
+            widget: text
+          - hint: >-
+              Original text: This new addition will provide a space for
+              photographers and other creatives to collaborate and produce
+              high-quality content., key: 458b359b
+            label: Text
+            name: 458b359b
+            widget: text
+          - hint: >-
+              Original text: The annex will serve as a versatile space for
+              various creative projects, including photo shoots, video
+              production, and more, key: 785b3330
+            label: Text
+            name: 785b3330
+            widget: text
+          - hint: 'Original text: Podcast, key: 4b0c1ae4'
+            label: Text
+            name: 4b0c1ae4
+            widget: string
+          - hint: 'Original text: Gallery, key: 57850f32'
+            label: Text
+            name: 57850f32
+            widget: string
+          - hint: >-
+              Original text: Browse through some photos of our premises, key:
+              -e40cbc5
+            label: Text
+            name: '-e40cbc5'
+            widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: 'Original text: Blog, key: 1fa3c2'
+            label: Text
+            name: 1fa3c2
+            widget: string
+          - hint: 'Original text: All , key: 1f2ebf'
+            label: Text
+            name: 1f2ebf
+            widget: string
+          - hint: 'Original text: Articles, key: -4564c9a3'
+            label: Text
+            name: '-4564c9a3'
+            widget: string
+          - hint: >-
+              Original text: Welcome to a realm where the potential is boundless
+              and the future is present. Step into a world of creative
+              discovery, where innovators breathe life into extraordinary
+              concepts. Join us to stay informed about the latest events,
+              artists, and trends, and embark on a journey of artistic
+              exploration., key: 3f8df7ec
+            label: Text
+            name: 3f8df7ec
+            widget: text
+          - hint: 'Original text: View All, key: 4b0951a6'
+            label: Text
+            name: 4b0951a6
+            widget: string
+          - hint: 'Original text: Music, key: 473fe05'
+            label: Text
+            name: 473fe05
+            widget: string
+          - hint: 'Original text: Events, key: 7c6ccd39'
+            label: Text
+            name: 7c6ccd39
+            widget: string
+          - hint: 'Original text: Read post, key: 319adcca'
+            label: Text
+            name: 319adcca
+            widget: string
+          - hint: 'Original text: Previous, key: -4811e0e9'
+            label: Text
+            name: '-4811e0e9'
+            widget: string
+          - hint: 'Original text: Next, key: 24ff13'
+            label: Text
+            name: 24ff13
+            widget: string
+          - hint: 'Original text: Contact us, key: 7f274abe'
+            label: Text
+            name: 7f274abe
+            widget: string
+          - hint: 'Original text: Get in touch , key: c1b6fb2'
+            label: Text
+            name: c1b6fb2
+            widget: string
+          - hint: 'Original text: today, key: 6969f41'
+            label: Text
+            name: 6969f41
+            widget: string
+          - hint: 'Original text: Get in touch with Us, key: 5d4fb866'
+            label: Text
+            name: 5d4fb866
+            widget: string
+          - hint: >-
+              Original text: Got Questions? Or You want to collaborate with us?
+              Send us a message!, key: 61eeeec5
+            label: Text
+            name: 61eeeec5
+            widget: string
+          - hint: 'Original text: Fill the form or , key: -6b234493'
+            label: Text
+            name: '-6b234493'
+            widget: string
+          - hint: 'Original text: Send us an email, key: 6a39ecb3'
+            label: Text
+            name: 6a39ecb3
+            widget: string
+          - hint: 'Original text: Phone, key: 4984d4e'
+            label: Text
+            name: 4984d4e
+            widget: string
+          - hint: 'Original text: +233-540-384-919, key: -44147b5f'
+            label: Text
+            name: '-44147b5f'
+            widget: string
+          - hint: 'Original text: +233-574-527-507, key: 49932e28'
+            label: Text
+            name: '49932e28'
+            widget: string
+          - hint: 'Original text: Email, key: 3ff5b7c'
+            label: Text
+            name: 3ff5b7c
+            widget: string
+          - hint: 'Original text: info@newsoundgh.com, key: -76f5d30b'
+            label: Text
+            name: '-76f5d30b'
+            widget: string
+          - hint: 'Original text: Address, key: 1ed033d4'
+            label: Text
+            name: 1ed033d4
+            widget: string
+          - hint: 'Original text: Lapaz, Accra - Ghana, key: 61b7748'
+            label: Text
+            name: 61b7748
+            widget: string
+          - hint: 'Original text: Send us a message, key: 20046dbe'
+            label: Text
+            name: 20046dbe
+            widget: string
+          - hint: >-
+              Original text: Thank you! Your submission has been received!, key:
+              5a0ea5a1
+            label: Text
+            name: 5a0ea5a1
+            widget: string
+          - hint: >-
+              Original text: Oops! Something went wrong while submitting the
+              form., key: -7c112e99
+            label: Text
+            name: '-7c112e99'
+            widget: string
+          - hint: 'Original text: Follow us on social media, key: -613962c1'
+            label: Text
+            name: '-613962c1'
+            widget: string
+          - hint: 'Original text: Check out , key: 547306ca'
+            label: Text
+            name: 547306ca
+            widget: string
+          - hint: 'Original text: our artistes, key: 6a96dc89'
+            label: Text
+            name: 6a96dc89
+            widget: string
+          - hint: >-
+              Original text: Our featured artists reflect the vibrant musical
+              spirit of Ghana. We showcase established and emerging talents from
+              across the country, representing the full breadth of sounds and
+              artistic voices that this diverse land has to offer. When you tune
+              in, expect to hear everything from highlife and hip-hop to
+              reggae-dancehall, afrobeat, and traditional genres - delivered by
+              gifted musicians whose creativity and vision capture the modern
+              Ghanaian experience across all its facets. , key: -26c117e4
+            label: Text
+            name: '-26c117e4'
+            widget: text
+          - hint: >-
+              Original text: We pride ourselves on not just promoting music, but
+              providing a platform where the pulse of Ghana's living musical
+              heritage and its possibilities find riveting expression., key:
+              -5e9cee23
+            label: Text
+            name: '-5e9cee23'
+            widget: text
+          - hint: 'Original text: View Artistes, key: -289066b0'
+            label: Text
+            name: '-289066b0'
+            widget: string
+          - hint: >-
+              Original text: Our roster showcases a diverse array of musical
+              talents. EXPLORE!, key: d15a67f
+            label: Text
+            name: d15a67f
+            widget: string
+          - hint: 'Original text: Artiste, key: 3791a1de'
+            label: Text
+            name: 3791a1de
+            widget: string
+          - hint: >-
+              Original text: Click to View This artiste's bio and music..., key:
+              -479deecc
+            label: Text
+            name: '-479deecc'
+            widget: string
+          - hint: 'Original text: Created On:, key: 461e34c3'
+            label: Text
+            name: 461e34c3
+            widget: string
+          - hint: 'Original text: All posts, key: 679ac74'
+            label: Text
+            name: 679ac74
+            widget: string
+          - hint: 'Original text: Share this post, key: -2c79323f'
+            label: Text
+            name: '-2c79323f'
+            widget: string
+          - hint: 'Original text: Facebook, key: 217bfee6'
+            label: Text
+            name: 217bfee6
+            widget: string
+          - hint: 'Original text: Twitter, key: 2c9a4253'
+            label: Text
+            name: 2c9a4253
+            widget: string
+          - hint: 'Original text: LinkedIn, key: 4b0ff13e'
+            label: Text
+            name: 4b0ff13e
+            widget: string
+          - hint: 'Original text: Whatsapp, key: 772ccdb2'
+            label: Text
+            name: 772ccdb2
+            widget: string
+          - hint: 'Original text: Related , key: -1d31b28b'
+            label: Text
+            name: '-1d31b28b'
+            widget: string
+          - hint: 'Original text: Follow on Instagram, key: -3fb38d80'
+            label: Text
+            name: '-3fb38d80'
+            widget: string
+          - hint: 'Original text: Artiste Bio, key: -fdeec5a'
+            label: Text
+            name: '-fdeec5a'
+            widget: string
+          - hint: 'Original text: Artistes , key: -664f4f95'
+            label: Text
+            name: '-664f4f95'
+            widget: string
+          - hint: 'Original text: Playlist, key: 73e0e5f2'
+            label: Text
+            name: 73e0e5f2
+            widget: string
+          - hint: >-
+              Original text: Below are links to this artistes music. Kindly
+              listen and show some love, key: -4886dfb7
+            label: Text
+            name: '-4886dfb7'
+            widget: string
+          - hint: 'Original text: Spotify, key: -13e98166'
+            label: Text
+            name: '-13e98166'
+            widget: string
+          - hint: 'Original text: Click to View Playlist, key: 46a41bc0'
+            label: Text
+            name: 46a41bc0
+            widget: string
+          - hint: 'Original text: Audiomack, key: -7d4b1a4e'
+            label: Text
+            name: '-7d4b1a4e'
+            widget: string
+          - hint: 'Original text: Soundcloud, key: 629d42a6'
+            label: Text
+            name: 629d42a6
+            widget: string
+          - hint: 'Original text: NEWSOUND , key: -4713a56f'
+            label: Text
+            name: '-4713a56f'
+            widget: string
+          - hint: 'Original text: ORIGINALS, key: -65c93f5e'
+            label: Text
+            name: '-65c93f5e'
+            widget: string
+          - hint: >-
+              Original text: The songs below represent NEWSOUND's commitment to
+              fresh, pioneering musical works. The following tracks resulted
+              from such synergy between our in-house creatives and collaborators
+              bonded by musical chemistry and originality. Every NEWSOUND
+              release captures our shared spirit of sonic adventure and
+              showcases the trademarks of our developing label - unexpected
+              fusions, bold textures, and melodies that linger., key: 6eb3fc82
+            label: Text
+            name: 6eb3fc82
+            widget: text
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: /, key: 2f'
+            label: Link
+            name: 2f
+            widget: string
+          - hint: 'Original link: /about/, key: 61642f31'
+            label: Link
+            name: 61642f31
+            widget: string
+          - hint: 'Original link: /artistes/, key: -445aab5'
+            label: Link
+            name: '-445aab5'
+            widget: string
+          - hint: 'Original link: /whats-new/, key: 3b7d54dc'
+            label: Link
+            name: 3b7d54dc
+            widget: string
+          - hint: 'Original link: /newsound-originals/, key: -4eec1fc4'
+            label: Link
+            name: '-4eec1fc4'
+            widget: string
+          - hint: 'Original link: /contact/, key: 16bdc13e'
+            label: Link
+            name: 16bdc13e
+            widget: string
+          - hint: >-
+              Original link: http://youtube.com/@newsoundofficial1, key:
+              -76f7cf1e
+            label: Link
+            name: '-76f7cf1e'
+            widget: string
+          - hint: 'Original link: http://www.ymlktechnologies.com, key: -19c9fe27'
+            label: Link
+            name: '-19c9fe27'
+            widget: string
+          - hint: >-
+              Original link: https://www.instagram.com/new_newsound/, key:
+              -3f95450f
+            label: Link
+            name: '-3f95450f'
+            widget: string
+          - hint: >-
+              Original link: https://www.youtube.com/@newsoundofficial1, key:
+              -4fdb9b6a
+            label: Link
+            name: '-4fdb9b6a'
+            widget: string
+          - hint: 'Original link: https://twitter.com/New_newsound, key: -369e46fa'
+            label: Link
+            name: '-369e46fa'
+            widget: string
+          - hint: >-
+              Original link: https://newsoundgh.com/#featured-Songs, key:
+              791ec205
+            label: Link
+            name: 791ec205
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: >-
+              Original link: mailto:info@newsoundgh.com?subject=Enquiries, key:
+              3e54235e
+            label: Link
+            name: 3e54235e
+            widget: string
+          - hint: 'Original link: tel:+61(8)94717645, key: -296c0c39'
+            label: Link
+            name: '-296c0c39'
+            widget: string
+          - hint: 'Original link: mailto:humans@conversionflow.co, key: -1bf7b57c'
+            label: Link
+            name: '-1bf7b57c'
+            widget: string
+          - hint: 'Original link: https://facebook.com/, key: -f3f4979'
+            label: Link
+            name: '-f3f4979'
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: i785a9c9d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i2f28dbd0
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i1393602
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2c3d8282
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i639f715c
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
