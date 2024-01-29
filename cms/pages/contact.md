@@ -1,5 +1,5 @@
 ---
-title: "Contact| Newsound "
+title: "Contact | Newsound "
 permalink: "{{ page.fileSlug }}/index.html"
 layout: contact.html
 slug: contact
