@@ -1,5 +1,5 @@
 ---
-title: "Home| Newsound "
+title: "Home | Newsound "
 permalink: index.html
 layout: index.html
 slug: ""
