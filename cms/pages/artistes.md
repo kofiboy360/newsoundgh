@@ -7,9 +7,9 @@ tags: pages
 date: 2024-01-29T12:25:07.187Z
 seo:
   noindex: false
-  title: Artistes| Newsound
-  og:title: Artistes| Newsound
-  twitter:title: Artistes| Newsound
+  title: Artistes | Newsound
+  og:title: Artistes | Newsound
+  twitter:title: Artistes | Newsound
   og:image: /assets/images/whatsapp-image-2024-01-29-at-09.19.00_6de185ec.jpg
   description: Our featured artists reflect the vibrant musical spirit of Ghana.
     We showcase established and emerging talents from across the country,
