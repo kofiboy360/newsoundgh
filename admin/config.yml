@@ -1063,6 +1063,14 @@ collections:
             label: Text
             name: 4b0c1ae4
             widget: string
+          - hint: >-
+              Original text: A brand new platform for voices to be heard. We're
+              thrilled to introduce our podcast studio , opening in soon as the
+              newest recording studio tailored to meet the needs of today's
+              podcasters and online broadcasters., key: 6f6ebdc
+            label: Text
+            name: 6f6ebdc
+            widget: text
           - hint: 'Original text: Gallery, key: 57850f32'
             label: Text
             name: 57850f32
