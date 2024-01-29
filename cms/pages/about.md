@@ -1,5 +1,5 @@
 ---
-title: About
+title: "About | Newsound "
 permalink: "{{ page.fileSlug }}/index.html"
 layout: about.html
 slug: about
@@ -9,7 +9,7 @@ seo:
   noindex: false
   title: About | Newsound
   og:title: About | Newsound
-  twitter:title: About
+  twitter:title: "About | Newsound "
   description: NEWSOUND is a haven for musicians, artists, and creative minds
     alike. Our mission is to provide a nurturing environment where innovation
     and passion collide, giving birth to sonic masterpieces that transcend
