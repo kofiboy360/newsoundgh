@@ -1,5 +1,5 @@
 ---
-title: "NewSound Originals  | Newsound "
+title: "Newsound Originals  | Newsound "
 permalink: "{{ page.fileSlug }}/index.html"
 layout: newsound-originals.html
 slug: newsound-originals
@@ -7,9 +7,9 @@ tags: pages
 date: 2024-01-29T12:34:01.726Z
 seo:
   noindex: false
-  title: "NewSound Originals "
-  og:title: NewSound Originals
-  twitter:title: NewSound Originals
+  title: "Newsound Originals "
+  og:title: Newsound Originals
+  twitter:title: Newsound Originals
   og:image: /assets/images/whatsapp-image-2024-01-29-at-09.19.00_6de185ec.jpg
   twitter:image: /assets/images/whatsapp-image-2024-01-29-at-09.19.00_6de185ec.jpg
   description: The songs below represent NEWSOUND's commitment to fresh,
