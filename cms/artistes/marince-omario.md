@@ -12,7 +12,7 @@ f_bio-2: Marince Omario is a Ghanaian rapper and singer who tries to implement
   want to be identified as an African. I want to employ that element of my
   identity in everything I do.
 f_profile-page-picture:
-  url: /assets/images/marince-omario.jpg
+  url: /assets/images/375x375bb.jpg
 tags: artistes
 layout: "[artistes].html"
 date: 2024-02-08T15:07:48.126Z
