@@ -26,4 +26,7 @@ seo:
   noindex: false
   twitter:title: summary
   twitter:card: summary
+  title: Marince Omario
+  og:title: Marince
+  og:image: /assets/images/marince-omario-artist-image.jpg
 ---
