@@ -18,7 +18,7 @@ f_bio-2: >-
 
   His most recent release Dilemma is a two track single pack (1) Dilemma and (2) DND Ft The ART
 f_profile-page-picture:
-  url: /assets/images/marince-omario.jpg
+  url: /assets/images/360_f_303408530_wm93wefhcadljw4n83qpqdjrktlp5f4s.jpg
 tags: artistes
 layout: "[artistes].html"
 date: 2024-02-08T15:51:03.611Z
