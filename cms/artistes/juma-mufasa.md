@@ -12,11 +12,7 @@ f_audiomack-profile-link: https://audiomack.com/jumamufasa
 f_artiste-genre: Alternative/Rap
 layout: "[artistes].html"
 slug: juma-mufasa
-f_bio-2: Goooooddd booyy mufasGoooooddd booyy mufasGoooooddd booyy
-  mufasGoooooddd booyy mufasGoooooddd booyy mufasGoooooddd booyy mufasGoooooddd
-  booyy mufasGoooooddd booyy mufasGoooooddd booyy mufasGoooooddd booyy
-  mufasGoooooddd booyy mufasGoooooddd booyy mufasGoooooddd booyy mufasGoooooddd
-  booyy mufas
+f_bio-2: ""
 f_instagram-link: https://www.instagram.com/jumamufasa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
 f_profile-page-picture:
   url: /assets/external/65b2d21e740f368b7ff57bbf_momo.jpg
