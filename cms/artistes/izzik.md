@@ -12,10 +12,7 @@ f_audiomack-profile-link: https://audiomack.com/zikofficial
 f_artiste-genre: Afro
 layout: "[artistes].html"
 slug: izzik
-f_bio-2: Good BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood
-  BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood
-  BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood BoyGood
-  BoyGood BoyGood BoyGood Boy
+f_bio-2: ""
 f_instagram-link: https://www.instagram.com/izzikofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
 f_profile-page-picture:
   url: /assets/external/65b2d2357c9c3b2cf0956a54_mastercard_logo.svg.png
