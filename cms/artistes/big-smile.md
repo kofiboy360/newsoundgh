@@ -10,12 +10,7 @@ f_email: bigsmile@gmail.com
 f_youtube-link: https://open.spotify.com/artist/5sRGcUDTvFWESjSsICNsGj?si=VjWoXAZIQ62s3l5gzxJVeQ
 f_audiomack-profile-link: https://audiomack.com/1bigsmile
 f_artiste-genre: Afro/Dancehall
-f_bio-2: Cool guy very good artiste with a good voiceCool guy very good artiste
-  with a good voiceCool guy very good artiste with a good voiceCool guy very
-  good artiste with a good voiceCool guy very good artiste with a good voiceCool
-  guy very good artiste with a good voiceCool guy very good artiste with a good
-  voiceCool guy very good artiste with a good voiceCool guy very good artiste
-  with a g
+f_bio-2: An emerging dancehall/afro music artist from Kaneshie, Accra.
 f_instagram-link: https://www.instagram.com/1big.smile?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
 layout: "[artistes].html"
 slug: big-smile
