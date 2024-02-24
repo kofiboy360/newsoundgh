@@ -9,10 +9,7 @@ f_picture:
 f_email: leehendrix@gmail.com
 f_youtube-link: https://open.spotify.com/artist/4msROszVVbBETFx1pnEUyv?si=89Pc6DfhTVmM55MThrRajA&nd=1&dlsi=2a5c92799287408a
 f_artiste-genre: Rap/Afro
-f_bio-2: leehendrix@gmail.comleehendrix@gmail.coml ehendrix@gmai
-  l.comleehendrix@gmail. comleehendrix @gmail.comlee h e ndrix@gmail.comleehend
-  rix@gmail.comlee hendri x@gmail.c omleehendrix@gmail.co mleehendrix
-  @gmail.comlee hendrix@gmail.comleehen drix@gmail.com
+f_bio-2: ""
 layout: "[artistes].html"
 slug: lee-hendrix
 f_instagram-link: https://www.instagram.com/lhndxx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
