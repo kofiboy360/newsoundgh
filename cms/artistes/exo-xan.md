@@ -12,12 +12,7 @@ f_audiomack-profile-link: https://audiomack.com/exo-xan
 f_artiste-genre: Afro
 layout: "[artistes].html"
 slug: exo-xan
-f_bio-2: Cool guy very good artiste with a good voiceCool guy very good artiste
-  with a good voiceCool guy very good artiste with a good voiceCool guy very
-  good artiste with a good voiceCool guy very good artiste with a good voiceCool
-  guy very good artiste with a good voiceCool guy very good artiste with a good
-  voiceCool guy very good artiste with a good voiceCool guy very good artiste
-  with a good voice
+f_bio-2: ""
 f_instagram-link: https://www.instagram.com/exo_xan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
 f_profile-page-picture:
   url: /assets/external/65b2d24ae065e7cbc58ae233_istockphoto-1223183702-612x612.jpg
