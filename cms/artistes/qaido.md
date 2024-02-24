@@ -9,16 +9,13 @@ f_picture:
 f_email: qaido@gmail.com
 f_youtube-link: https://open.spotify.com/album/3woHyLSe3YcUqBKvmN0SHG?si=2W6lT-DYQUuMcaP6VToGCQ
 f_audiomack-profile-link: https://audiomack.com/qaido
-f_artiste-genre: Alternative/Rap
+f_artiste-genre: Alternative/Afro
 layout: "[artistes].html"
 slug: qaido
-f_bio-2: RaggaeRaggaeRaggaeR aggaeRaggaeRaggaeRaggaeR
-  aggaeRaggaeRaggaeRaggaeRagga eRaggaeRaggaeRaggaeRaggaeRag
-  gaeRaggaeRaggaeRaggaeRaggaeR aggaeRaggaeRaggaeRaggaeRagga eRaggaeRaggaeRa
-  ggaeRaggaeRagg aeRaggaeRaggae
+f_bio-2: ""
 f_instagram-link: https://www.instagram.com/qaido_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
 f_profile-page-picture:
-  url: /assets/external/65b2d1fbf8e4d202a42603d1_77775dfa22d76d4dec6cb9c0a54fd514.jpg
+  url: /assets/images/qaido.jpg
   alt: null
 tags: artistes
 date: 2024-02-08T14:10:18.449Z
