@@ -15,6 +15,8 @@ seo:
   twitter:title: summary
   twitter:card: summary
 ---
+# Lady Donli and The Lagos Panic Live in Accra
+
 Ria Boss kicks off 2024 with #RIABOSSPRESENTS, an avenue to celebrate her favorite artists while providing music lovers in Accra with the best concert experience. The first edition, scheduled for March 14, 2024, will host Nigerian singer Lady Donli and The Lagos Panic. The intimate concert will be held at the Barndoor Beergarden. The show comes after the neo-soul singer released the music video for “Real Love” from her debut live album Remember, and after she featured in the music video for Asa’s “Odo.”
 
 This will be the second time Boss and Donli will perform together after they headlined Sunday Best, a WATWOMXN x AYA Editions concert in 2021. Now, after lighting up Lagos in December with a residency that saw Lady Donli and her incredible band The Lagos Panic headline at the Lagos Irish Pub of the Eko Hotel every Friday in December, the “Thunderstorm in Surulere” hitmakers are bringing their fiery sound to Accra.
