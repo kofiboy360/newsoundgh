@@ -24,19 +24,23 @@ In his latest EP, "Arrrggghhhhh!", Ghanaian musician Papa Atey delivers a raw an
 
 The EP kicks off with "My head is an Animal," a mesmerizing track featuring Kwesi Soul that sets the tone for the project. With haunting melodies produced by Zeus Daniels, Papa Atey reflects on his past experiences of reckless abandon, inviting listeners to delve into the depths of his psyche. Kwesi Soul then provides a different perspective on navigating ambition's overwhelming thoughts.
 
+![](/assets/images/pa2.png)
+
 Papa Atey's emotive vocals and evocative lyrics paint a vivid picture of fleeting connections and lost opportunities in "Last Night I Thought About You in Osu," produced by the mysterious KweLit!. The song's blend of nostalgia and longing leaves a lasting impression, even after a first listen. 
 
 On "Was it Just Lust?", Papa Atey confronts the complexities of relationships and the consequences of impulsive decisions with an infectious beat produced by JustKojo. "Was it Just Lust?" prompts introspection on the blurred lines between love and lust. 
+
+![](/assets/images/pa3.png)
 
 "Maybe I’m Overthinking!" delves into the anxieties and uncertainties of self-discovery. Papa Atey grapples with self-doubt, with the thumping melodies in the beat produced by Spicy Velvet mirroring the sensation of clouded thoughts. Cyril Shey also dispenses wisdom from a trusted advocate's perspective, capturing the universal struggle to find clarity amidst chaos.
 
 The EP closes with "No, I Don’t Want to Relapse," a powerful anthem of determination and resilience. Papa Atey confronts his demons head-on, vowing to break free from the cycle of addiction and self-destruction. With its anthemic chorus and driving beat, "No, I Don’t Want to Relapse” leaves listeners feeling empowered and uplifted.
 
+![](/assets/images/pa4.jpg)
+
 Overall, "Arrrggghhhhh!" is a masterful showcase of Papa Atey's artistry and storytelling prowess. With its evocative lyrics, poignant messages and dynamic soundscapes all mixed and mastered by 7thromahn, the EP stands as a testament to the power of music to inspire introspection and transformation. 
 
 Stream ARRRGGGHHHHH! here: <https://open.spotify.com/album/2A1IcvccYKSgHFVClEdsdn?si=Z0NzOJjlQTuAkWINPUpJKA>
-
-
 
 Written by NiiMo
 
