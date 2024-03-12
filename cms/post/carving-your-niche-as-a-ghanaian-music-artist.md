@@ -40,3 +40,5 @@ Alternatively, your niche could arise from an innovative genre-blending approach
 ### **Let Your Voice Cut Through**
 
  At the end of the day, one of the most distinctive instrumental you have is your literal voice. Embrace those qualities that make your vocal tone and delivery style distinctive, whether it's a velvety smoothness, powerful grit, or rapid-fire flow. Let your inimitable pipes be your calling card.
+
+However you choose to define your niche, lean into it fully through your visuals, lyricism, collaborators, and overall branding. Consistency breeds familiarity, and familiarity breeds ardent fandom over time. Don't be afraid to get niche - your singular artistic voice is what will make you unforgettable in a crowded music landscape.
