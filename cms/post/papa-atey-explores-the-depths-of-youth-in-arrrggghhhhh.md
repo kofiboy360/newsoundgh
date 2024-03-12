@@ -21,8 +21,6 @@ seo:
 
 Papa Atey's EP, "Arrrggghhhhh!", dives into the gritty reality of youth, tackling themes like love, excess, and self-discovery. Drawing from his own experiences, Papa Atey recounts a time of reckless abandon, where indulgence often led to self-destruction.
 
-![](https://lh7-us.googleusercontent.com/pglKwQAth8yu3IYCxUc7HWNfqPTXOJFQHtHjHjS2o5_dxPqePSVs-58zBYOoAtxsXg3Q2L72CZ6GUXnzQ3ovkxOQU6RwTzTqDwjp0lH-QclpCrywVaCF3ShvGm_UgT6zNNfwaY1Q_pH3FNUgoZCUe8I)
-
 In his latest EP, "Arrrggghhhhh!", Ghanaian musician Papa Atey delivers a raw and unfiltered exploration of the emotional rollercoaster of young adulthood and self-discovery. Through five tracks that seamlessly blend introspective lyrics with hypnotic genre-bending beats, Papa Atey crafts a sonic journey that resonates with authenticity and depth.
 
 The EP kicks off with "My head is an Animal," a mesmerizing track featuring Kwesi Soul that sets the tone for the project. With haunting melodies produced by Zeus Daniels, Papa Atey reflects on his past experiences of reckless abandon, inviting listeners to delve into the depths of his psyche. Kwesi Soul then provides a different perspective on navigating ambition's overwhelming thoughts.
