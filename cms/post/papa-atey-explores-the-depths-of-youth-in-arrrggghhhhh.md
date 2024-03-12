@@ -19,7 +19,7 @@ seo:
 
 ### Rating: 8.5
 
-\[Papa Atey's EP, "Arrrggghhhhh!", dives into the gritty reality of youth, tackling themes like love, excess, and self-discovery. Drawing from his own experiences, Papa Atey recounts a time of reckless abandon, where indulgence often led to self-destruction.]
+Papa Atey's EP, "Arrrggghhhhh!", dives into the gritty reality of youth, tackling themes like love, excess, and self-discovery. Drawing from his own experiences, Papa Atey recounts a time of reckless abandon, where indulgence often led to self-destruction.
 
 ![](https://lh7-us.googleusercontent.com/pglKwQAth8yu3IYCxUc7HWNfqPTXOJFQHtHjHjS2o5_dxPqePSVs-58zBYOoAtxsXg3Q2L72CZ6GUXnzQ3ovkxOQU6RwTzTqDwjp0lH-QclpCrywVaCF3ShvGm_UgT6zNNfwaY1Q_pH3FNUgoZCUe8I)
 
