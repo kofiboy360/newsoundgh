@@ -5,7 +5,7 @@ updated-on: 2024-03-12T09:06:07.670Z
 published-on: 2024-03-12T09:06:07.685Z
 f_main-image:
   url: /assets/images/papa-atey.jpg
-f_featured: false
+f_featured: true
 f_category: cms/category/music.md
 tags: post
 layout: "[post].html"
