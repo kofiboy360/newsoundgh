@@ -5,7 +5,7 @@ updated-on: 2024-03-11T16:22:07.500Z
 published-on: 2024-03-11T16:22:07.512Z
 f_main-image:
   url: /assets/images/donli-main-flyer.png
-f_featured: true
+f_featured: false
 f_category: cms/category/events.md
 tags: post
 layout: "[post].html"
