@@ -87,6 +87,175 @@ collections:
             name: additional_tags
             widget: text
             required: false
+  - name: top_scrolling_images_homepage
+    label: Top Scrolling Images (Homepage)s
+    folder: cms/top-scrolling-images-homepage
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: You can write any name here Doesnt matter
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: Upload the image to display here
+        name: f_image
+        label: Image
+        widget: object
+        required: true
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: true
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: top-scrolling-images-homepage
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[top-scrolling-images-homepage].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: latest_music_youtube_video_on_homepage
+    label: Latest Music ( Youtube Video on Homepage)s
+    folder: cms/latest-music-youtube-video-on-homepage
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: >-
+          When you click "Share" on a youtube video, you get a link like this
+          (https://youtu.be/2G7Nb5LAtTY?si=UYT2uCzoK5Q2INTo). The text behind
+          the "https://youtu.be/" is the ID. So for this the ID will be
+          (2G7Nb5LAtTY?si=UYT2uCzoK5Q2INTo). DONT ADD THE BRACKET, JUST THE
+          TEXT.!
+        name: title
+        label: Youtube ID
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: latest-music-youtube-video-on-homepage
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[latest-music-youtube-video-on-homepage].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
+  - name: info_banners
+    label: Info banners
+    folder: cms/info-banners
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_banner-text
+        label: banner text
+        widget: string
+        required: false
+      - hint: ''
+        name: f_button-text
+        label: button Text
+        widget: string
+        required: false
+      - hint: ''
+        name: f_button-link
+        label: button link
+        widget: string
+        required: false
+      - hint: ''
+        name: f_active
+        label: active
+        widget: boolean
+        required: false
+        default: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: info-banners
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[info-banners].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+    editor:
+      preview: false
   - name: gallery
     label: Galleries
     folder: cms/gallery
@@ -260,9 +429,9 @@ collections:
       - *ref_0
     editor:
       preview: false
-  - name: artistes
-    label: Artistes
-    folder: cms/artistes
+  - name: videos
+    label: Video Contents
+    folder: cms/videos
     create: true
     identifier_field: name
     extension: md
@@ -287,135 +456,15 @@ collections:
         name: published-on
         label: Published On
         widget: datetime
-        required: false
-      - hint: ''
-        name: f_picture
-        label: Main Picture
-        widget: object
-        required: false
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: false
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - hint: ''
-        name: f_email
-        label: Email
-        widget: string
-        required: false
-      - hint: ''
-        name: f_soundcloud-profile-link
-        label: Soundcloud Profile link
-        widget: string
-        required: false
-      - hint: ''
-        name: f_youtube-link
-        label: Spotify Profile
-        widget: string
-        required: false
-      - hint: ''
-        name: f_audiomack-profile-link
-        label: Audiomack Profile link
-        widget: string
-        required: false
-      - hint: ''
-        name: f_artiste-genre
-        label: Artiste Genre
-        widget: string
-        required: false
-      - hint: ''
-        name: f_bio-2
-        label: Bio
-        widget: text
-        required: false
-      - hint: ''
-        name: f_instagram-link
-        label: Instagram Link
-        widget: string
-        required: false
-      - hint: ''
-        name: f_code-for-sound-cloud
-        label: Spotify Track Code ID
-        widget: string
-        required: false
-      - hint: The picture that appears on the artist profile page
-        name: f_profile-page-picture
-        label: Profile Page Picture
-        widget: object
-        required: true
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: true
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - label: Tags
-        widget: hidden
-        name: tags
-        default: artistes
-      - label: Layout
-        widget: hidden
-        name: layout
-        default: '[artistes].html'
-      - label: Publish Date
-        name: date
-        widget: datetime
-      - *ref_0
-    editor:
-      preview: false
-  - name: post
-    label: Blog Posts
-    folder: cms/post
-    create: true
-    identifier_field: name
-    extension: md
-    slug: '{{slug}}'
-    fields:
-      - hint: ''
-        name: title
-        label: Name
-        widget: string
-        required: true
-      - hint: ''
-        name: created-on
-        label: Created On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: updated-on
-        label: Updated On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: published-on
-        label: Published On
-        widget: datetime
-        required: false
-      - label: Post Body
-        name: body
-        widget: markdown
         required: false
       - hint: Dont enter any text here...Mistake
         name: f_post-summary
-        label: Post Summary
+        label: Video Summary
         widget: string
         required: false
-      - hint: ''
+      - hint: Video Thumbnail
         name: f_main-image
-        label: Main Image
+        label: Video Thumbnail
         widget: object
         required: true
         fields:
@@ -432,13 +481,13 @@ collections:
             required: false
       - hint: ''
         name: f_featured
-        label: Featured?
+        label: Featured Video?
         widget: boolean
         required: false
         default: false
       - hint: ''
         name: f_category
-        label: Category
+        label: Video Category
         widget: relation
         required: true
         collection: category
@@ -449,14 +498,37 @@ collections:
         display_fields:
           - title
         multiple: false
+      - hint: Enter the video URL here
+        name: f_video-link-2
+        label: Video Link
+        widget: string
+        required: false
+      - hint: >-
+          When you click "Share" on a youtube video, you get a link like this
+          (https://youtu.be/2G7Nb5LAtTY?si=UYT2uCzoK5Q2INTo). The text behind
+          the "https://youtu.be/" is the ID. So for this the ID will be
+          (2G7Nb5LAtTY?si=UYT2uCzoK5Q2INTo). DONT ADD THE BRACKET, JUST THE
+          TEXT.!
+        name: f_youtube-video-id
+        label: Youtube Video ID
+        widget: string
+        required: false
+      - hint: >-
+          Turn on the switch if it is a Youtube Video you are uploading. Leaveit
+          OFF if it is not a youtube video you are uploading
+        name: f_youtube-video
+        label: YouTube Video??
+        widget: boolean
+        required: false
+        default: false
       - label: Tags
         widget: hidden
         name: tags
-        default: post
+        default: videos
       - label: Layout
         widget: hidden
         name: layout
-        default: '[post].html'
+        default: '[videos].html'
       - label: Publish Date
         name: date
         widget: datetime
@@ -617,6 +689,10 @@ collections:
             name: title
             widget: hidden
             default: Texts
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
           - hint: 'Original text: NEW, key: 12d80'
             label: Text
             name: 12d80
@@ -632,10 +708,6 @@ collections:
           - hint: 'Original text: About, key: 3c2336d'
             label: Text
             name: 3c2336d
-            widget: string
-          - hint: 'Original text: Artistes, key: -455d65ab'
-            label: Text
-            name: '-455d65ab'
             widget: string
           - hint: 'Original text: What''s New, key: -21a74f90'
             label: Text
@@ -671,42 +743,57 @@ collections:
             label: Text
             name: '-7e29ec91'
             widget: string
+          - hint: 'Original text: Watch Exclusive Content, key: 54dfd386'
+            label: Text
+            name: 54dfd386
+            widget: string
           - hint: 'Original text: Featured Songs, key: -3487d874'
             label: Text
             name: '-3487d874'
             widget: string
-          - hint: 'Original text: What We are About, key: -4fd16c55'
+          - hint: 'Original text: Exclusive , key: -5cbe0e9e'
             label: Text
-            name: '-4fd16c55'
+            name: '-5cbe0e9e'
             widget: string
-          - hint: 'Original text: About Our , key: -377178b9'
+          - hint: 'Original text: Content, key: -641033a7'
             label: Text
-            name: '-377178b9'
-            widget: string
-          - hint: 'Original text: Studio, key: -6bc46a0a'
-            label: Text
-            name: '-6bc46a0a'
+            name: '-641033a7'
             widget: string
           - hint: >-
-              Original text: Drawing inspiration from the rhythmic pulse of
-              Accra's diverse musical traditions, NEWSOUND is a haven for
-              musicians, artists, and creative minds alike. Our mission is to
-              provide a nurturing environment where innovation and passion
-              collide, giving birth to sonic masterpieces that transcend
-              boundaries., key: 5297e80c
+              Original text: Below is some of our exclusive video content, key:
+              55a593da
             label: Text
-            name: 5297e80c
+            name: 55a593da
+            widget: string
+          - hint: 'Original text: Watch Video, key: 3db38daa'
+            label: Text
+            name: 3db38daa
+            widget: string
+          - hint: >-
+              Original text: No Content has been posted yet. Once they are
+              posted they will show up here..., key: 179a242b
+            label: Text
+            name: 179a242b
+            widget: string
+          - hint: 'Original text: Previous, key: -4811e0e9'
+            label: Text
+            name: '-4811e0e9'
+            widget: string
+          - hint: 'Original text: Next, key: 24ff13'
+            label: Text
+            name: 24ff13
+            widget: string
+          - hint: 'Original text: Our YouTube , key: -68cc582f'
+            label: Text
+            name: '-68cc582f'
+            widget: string
+          - hint: >-
+              Original text: Below is some of our YouTube. Kindly subscribe to
+              our YouTube channel and turn on our post notifications, key:
+              7bba7be
+            label: Text
+            name: 7bba7be
             widget: text
-          - hint: >-
-              Original text: Immerse yourself in the energy of NEWSOUND and
-              experience the magic of Lapaz, Accra. , key: -2d2a63ed
-            label: Text
-            name: '-2d2a63ed'
-            widget: string
-          - hint: 'Original text: See More, key: 3b180342'
-            label: Text
-            name: 3b180342
-            widget: string
           - hint: 'Original text: Featured , key: 5e61c192'
             label: Text
             name: 5e61c192
@@ -736,18 +823,6 @@ collections:
           - hint: 'Original text: genres, key: -4a79d8b0'
             label: Text
             name: '-4a79d8b0'
-            widget: string
-          - hint: 'Original text: Check out, key: -70e383ea'
-            label: Text
-            name: '-70e383ea'
-            widget: string
-          - hint: 'Original text: our Artistes, key: 6e7140a9'
-            label: Text
-            name: 6e7140a9
-            widget: string
-          - hint: 'Original text: View All Aritstes, key: -1b78a8bb'
-            label: Text
-            name: '-1b78a8bb'
             widget: string
           - hint: 'Original text: Features, key: -d78b7a3'
             label: Text
@@ -830,51 +905,13 @@ collections:
             label: Text
             name: '-515f0e30'
             widget: text
-          - hint: 'Original text: What''s new, key: -21a6d770'
-            label: Text
-            name: '-21a6d770'
-            widget: string
-          - hint: 'Original text: Latest Blog , key: -3f6a351b'
-            label: Text
-            name: '-3f6a351b'
-            widget: string
-          - hint: 'Original text: Posts, key: 49b8bb3'
-            label: Text
-            name: 49b8bb3
-            widget: string
-          - hint: 'Original text: Read Article..., key: 630f1282'
-            label: Text
-            name: 630f1282
-            widget: string
-          - hint: >-
-              Original text: No Blogs have been posted yet. Once they are posted
-              they will show up here..., key: 198b646d
-            label: Text
-            name: 198b646d
-            widget: string
-          - hint: 'Original text: Latest , key: 6071f959'
-            label: Text
-            name: 6071f959
-            widget: string
-          - hint: 'Original text: articles, key: -493f2dc3'
-            label: Text
-            name: '-493f2dc3'
-            widget: string
-          - hint: 'Original text: View All..., key: 11753708'
-            label: Text
-            name: '11753708'
-            widget: string
-          - hint: 'Original text: Jan 20, 2022, key: -59cc7bc7'
-            label: Text
-            name: '-59cc7bc7'
-            widget: string
           - hint: 'Original text: © , key: 1497'
             label: Text
             name: '1497'
             widget: string
-          - hint: 'Original text: 2023, key: 1774ff'
+          - hint: 'Original text: 2024, key: 177500'
             label: Text
-            name: 1774ff
+            name: '177500'
             widget: string
           - hint: 'Original text: NewSound GH, key: 162fff32'
             label: Text
@@ -934,6 +971,14 @@ collections:
           - hint: 'Original text: About Us, key: 645efc51'
             label: Text
             name: 645efc51
+            widget: string
+          - hint: 'Original text: About Our , key: -377178b9'
+            label: Text
+            name: '-377178b9'
+            widget: string
+          - hint: 'Original text: Studio, key: -6bc46a0a'
+            label: Text
+            name: '-6bc46a0a'
             widget: string
           - hint: 'Original text: A Creative Sanctuary. , key: -37926e1c'
             label: Text
@@ -1081,10 +1126,6 @@ collections:
             label: Text
             name: '-e40cbc5'
             widget: string
-          - hint: 'Original text: No items found., key: 3d503d2b'
-            label: Text
-            name: 3d503d2b
-            widget: string
           - hint: 'Original text: Blog, key: 1fa3c2'
             label: Text
             name: 1fa3c2
@@ -1092,10 +1133,6 @@ collections:
           - hint: 'Original text: All , key: 1f2ebf'
             label: Text
             name: 1f2ebf
-            widget: string
-          - hint: 'Original text: Articles, key: -4564c9a3'
-            label: Text
-            name: '-4564c9a3'
             widget: string
           - hint: >-
               Original text: Welcome to a realm where the potential is boundless
@@ -1107,29 +1144,21 @@ collections:
             label: Text
             name: 3f8df7ec
             widget: text
-          - hint: 'Original text: View All, key: 4b0951a6'
+          - hint: 'Original text: Exclusive Videos, key: 523475a'
             label: Text
-            name: 4b0951a6
+            name: 523475a
             widget: string
-          - hint: 'Original text: Music, key: 473fe05'
+          - hint: 'Original text: Youtube Videos, key: -7a2acccb'
             label: Text
-            name: 473fe05
+            name: '-7a2acccb'
             widget: string
-          - hint: 'Original text: Events, key: 7c6ccd39'
+          - hint: 'Original text: Other Content, key: -6ca0f8d7'
             label: Text
-            name: 7c6ccd39
+            name: '-6ca0f8d7'
             widget: string
           - hint: 'Original text: Read post, key: 319adcca'
             label: Text
             name: 319adcca
-            widget: string
-          - hint: 'Original text: Previous, key: -4811e0e9'
-            label: Text
-            name: '-4811e0e9'
-            widget: string
-          - hint: 'Original text: Next, key: 24ff13'
-            label: Text
-            name: 24ff13
             widget: string
           - hint: 'Original text: Contact us, key: 7f274abe'
             label: Text
@@ -1213,61 +1242,31 @@ collections:
             label: Text
             name: '-613962c1'
             widget: string
-          - hint: 'Original text: Check out , key: 547306ca'
-            label: Text
-            name: 547306ca
-            widget: string
-          - hint: 'Original text: our artistes, key: 6a96dc89'
-            label: Text
-            name: 6a96dc89
-            widget: string
           - hint: >-
-              Original text: Our featured artists reflect the vibrant musical
-              spirit of Ghana. We showcase established and emerging talents from
-              across the country, representing the full breadth of sounds and
-              artistic voices that this diverse land has to offer. When you tune
-              in, expect to hear everything from highlife and hip-hop to
-              reggae-dancehall, afrobeat, and traditional genres - delivered by
-              gifted musicians whose creativity and vision capture the modern
-              Ghanaian experience across all its facets. , key: -26c117e4
+              Original text: No Blogs have been posted yet. Once they are posted
+              they will show up here..., key: 198b646d
             label: Text
-            name: '-26c117e4'
-            widget: text
-          - hint: >-
-              Original text: We pride ourselves on not just promoting music, but
-              providing a platform where the pulse of Ghana's living musical
-              heritage and its possibilities find riveting expression., key:
-              -5e9cee23
-            label: Text
-            name: '-5e9cee23'
-            widget: text
-          - hint: 'Original text: View Artistes, key: -289066b0'
-            label: Text
-            name: '-289066b0'
+            name: 198b646d
             widget: string
-          - hint: >-
-              Original text: Our roster showcases a diverse array of musical
-              talents. EXPLORE!, key: d15a67f
+          - hint: 'Original text: NEWSOUND , key: -4713a56f'
             label: Text
-            name: d15a67f
+            name: '-4713a56f'
             widget: string
-          - hint: 'Original text: Artiste, key: 3791a1de'
+          - hint: 'Original text: ORIGINALS, key: -65c93f5e'
             label: Text
-            name: 3791a1de
+            name: '-65c93f5e'
             widget: string
-          - hint: >-
-              Original text: Click to View This artiste's bio and music..., key:
-              -479deecc
+          - hint: 'Original text: Music, key: 473fe05'
             label: Text
-            name: '-479deecc'
+            name: 473fe05
             widget: string
-          - hint: 'Original text: Created On:, key: 461e34c3'
+          - hint: 'Original text: Added On:, key: -6ad0bd25'
             label: Text
-            name: 461e34c3
+            name: '-6ad0bd25'
             widget: string
-          - hint: 'Original text: All posts, key: 679ac74'
+          - hint: 'Original text: All vidoes, key: -2d627cd5'
             label: Text
-            name: 679ac74
+            name: '-2d627cd5'
             widget: string
           - hint: 'Original text: Share this post, key: -2c79323f'
             label: Text
@@ -1293,63 +1292,14 @@ collections:
             label: Text
             name: '-1d31b28b'
             widget: string
-          - hint: 'Original text: Follow on Instagram, key: -3fb38d80'
+          - hint: 'Original text: Videos, key: -67489888'
             label: Text
-            name: '-3fb38d80'
+            name: '-67489888'
             widget: string
-          - hint: 'Original text: Artiste Bio, key: -fdeec5a'
+          - hint: 'Original text: View All..., key: 11753708'
             label: Text
-            name: '-fdeec5a'
+            name: '11753708'
             widget: string
-          - hint: 'Original text: Artistes , key: -664f4f95'
-            label: Text
-            name: '-664f4f95'
-            widget: string
-          - hint: 'Original text: Playlist, key: 73e0e5f2'
-            label: Text
-            name: 73e0e5f2
-            widget: string
-          - hint: >-
-              Original text: Below are links to this artistes music. Kindly
-              listen and show some love, key: -4886dfb7
-            label: Text
-            name: '-4886dfb7'
-            widget: string
-          - hint: 'Original text: Spotify, key: -13e98166'
-            label: Text
-            name: '-13e98166'
-            widget: string
-          - hint: 'Original text: Click to View Playlist, key: 46a41bc0'
-            label: Text
-            name: 46a41bc0
-            widget: string
-          - hint: 'Original text: Audiomack, key: -7d4b1a4e'
-            label: Text
-            name: '-7d4b1a4e'
-            widget: string
-          - hint: 'Original text: Soundcloud, key: 629d42a6'
-            label: Text
-            name: 629d42a6
-            widget: string
-          - hint: 'Original text: NEWSOUND , key: -4713a56f'
-            label: Text
-            name: '-4713a56f'
-            widget: string
-          - hint: 'Original text: ORIGINALS, key: -65c93f5e'
-            label: Text
-            name: '-65c93f5e'
-            widget: string
-          - hint: >-
-              Original text: The songs below represent NEWSOUND's commitment to
-              fresh, pioneering musical works. The following tracks resulted
-              from such synergy between our in-house creatives and collaborators
-              bonded by musical chemistry and originality. Every NEWSOUND
-              release captures our shared spirit of sonic adventure and
-              showcases the trademarks of our developing label - unexpected
-              fusions, bold textures, and melodies that linger., key: 6eb3fc82
-            label: Text
-            name: 6eb3fc82
-            widget: text
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -1366,10 +1316,6 @@ collections:
             label: Link
             name: 61642f31
             widget: string
-          - hint: 'Original link: /artistes/, key: -445aab5'
-            label: Link
-            name: '-445aab5'
-            widget: string
           - hint: 'Original link: /whats-new/, key: 3b7d54dc'
             label: Link
             name: 3b7d54dc
@@ -1381,6 +1327,10 @@ collections:
           - hint: 'Original link: /contact/, key: 16bdc13e'
             label: Link
             name: 16bdc13e
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
             widget: string
           - hint: >-
               Original link: http://youtube.com/@newsoundofficial1, key:
@@ -1414,10 +1364,6 @@ collections:
             label: Link
             name: 791ec205
             widget: string
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
-            widget: string
           - hint: >-
               Original link: mailto:info@newsoundgh.com?subject=Enquiries, key:
               3e54235e
@@ -1435,6 +1381,12 @@ collections:
           - hint: 'Original link: https://facebook.com/, key: -f3f4979'
             label: Link
             name: '-f3f4979'
+            widget: string
+          - hint: >-
+              Original link: https://archive.org/details/BigBuckBunny_124, key:
+              -110b34ce
+            label: Link
+            name: '-110b34ce'
             widget: string
       - label: Images
         name: images
@@ -1498,6 +1450,19 @@ collections:
                 required: false
           - label: Image
             name: i639f715c
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2961ac24'
             widget: object
             fields:
               - name: url
@@ -1679,7 +1644,20 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-14a16ada'
+            name: '0'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-33268177'
             widget: object
             fields:
               - name: url
@@ -1693,71 +1671,6 @@ collections:
                 required: false
           - label: Image
             name: '-7d20f2fa'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-36f21826'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-4c977d89'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-85bc6e5'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 559e8e6b
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 4d7b6006
             widget: object
             fields:
               - name: url
@@ -1809,6 +1722,19 @@ collections:
                 widget: string
                 required: false
           - label: Image
+            name: '-668838c8'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
             name: '-2c6f0980'
             widget: object
             fields:
@@ -1835,7 +1761,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 5fc3a80d
+            name: f806ffd
             widget: object
             fields:
               - name: url
@@ -1848,7 +1774,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 38c538de
+            name: 1d95b8f9
             widget: object
             fields:
               - name: url
@@ -1861,46 +1787,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 4c3fac3b
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 709f5779
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 7621b080
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-19d2e5aa'
+            name: '-3bf933d8'
             widget: object
             fields:
               - name: url
@@ -1991,20 +1878,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-4fd42c7c'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 76bbcb3c
+            name: '-1a4f4db6'
             widget: object
             fields:
               - name: url
@@ -2057,84 +1931,6 @@ collections:
                 required: false
           - label: Image
             name: '-696592de'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 21ed5eec
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 2a72988d
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 779653fb
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-685f1ff7'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-5fbaf5d5'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-1a4f4db6'
             widget: object
             fields:
               - name: url
